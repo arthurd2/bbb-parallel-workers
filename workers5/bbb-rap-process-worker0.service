@@ -4,10 +4,11 @@ ConditionPathExistsGlob=/var/bigbluebutton/recording/status/sanity/*.done
 
 [Service]
 Type=simple
-ExecStart=/usr/local/bigbluebutton/core/scripts/rap-process-worker.multiprocess.rb -p "[2-3]$"
+ExecStart=/usr/local/bigbluebutton/core/scripts/rap-process-worker.multiprocess.rb -p "[0-1]$"
 WorkingDirectory=/usr/local/bigbluebutton/core/scripts
 User=bigbluebutton
 Slice=bbb_record_core.slice
 
 [Install]
 WantedBy=bbb-record-core.target
+
